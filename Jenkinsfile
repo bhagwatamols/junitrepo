@@ -53,7 +53,7 @@ pipeline {
         stage('Deploy'){
             steps{
                 bat 'chdir src/'
-                bat 'java App' 
+              
             }
         }
     }
