@@ -15,12 +15,15 @@ pipeline {
             steps{
                 bat 'mkdir lib'
 				dir("C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\JUNIT_TEST\\lib\\") {
-				bar 'cd'
+				bat 'cd'
 				}
-                bat 'chdir  C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\JUNIT_TEST\\lib\\'
-                bat 'copy D:\\zlib\\*'
-                bat 'cd'
-                bat 'cd C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\JUNIT_TEST\\src\\'
+		
+		        bat 'copy D:\\zlib\\*'
+		dir("cd C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\JUNIT_TEST\\src\\") {
+				bat 'cd'
+				}        
+
+       
                 bat 'javac -cp ../lib/* CarTest.java Car.java App.java'
             }
         }
