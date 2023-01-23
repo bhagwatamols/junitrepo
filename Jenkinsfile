@@ -14,10 +14,10 @@ pipeline {
         stage('Build'){
             steps{
                 bat 'mkdir lib'
-                bat 'chdir lib/'
+                bat 'chdir lib//'
                 bat 'copy D:\\zlib\\*'
                 bat 'chdir ..'
-                bat 'chdir src/'
+                bat 'chdir src//'
                 bat 'javac -cp ../lib/* CarTest.java Car.java App.java'
             }
         }
