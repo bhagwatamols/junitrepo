@@ -21,7 +21,7 @@ pipeline {
 				
 				}        
   
-				dir("cd C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\JUNIT_TEST\\src\\") {
+				dir("C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\JUNIT_TEST\\src\\") {
 				 bat 'javac -cp ../lib/* CarTest.java Car.java App.java'
 				}        
 
