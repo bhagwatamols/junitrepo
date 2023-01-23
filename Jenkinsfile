@@ -44,7 +44,7 @@ pipeline {
 				} 
 				
 		    dir("C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\JUNIT_TEST\\src\\reports") {
-			    junit 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\JUNIT_TEST\\src\\reports\\*-jupiter.xml'
+			    junit 'C:\ProgramData\Jenkins\.jenkins\workspace\JUNIT_TEST\src\reports\*-jupiter.xml'
 		    }
                
             }
