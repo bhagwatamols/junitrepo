@@ -14,7 +14,10 @@ pipeline {
         stage('Build'){
             steps{
                 bat 'mkdir lib'
-                bat 'chdir /d C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\JUNIT_TEST\\lib\\'
+				dir("C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\JUNIT_TEST\\lib\\") {
+				bar 'cd'
+				}
+                bat 'chdir  C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\JUNIT_TEST\\lib\\'
                 bat 'copy D:\\zlib\\*'
                 bat 'cd'
                 bat 'cd C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\JUNIT_TEST\\src\\'
