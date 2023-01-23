@@ -42,7 +42,7 @@ pipeline {
 				} 
 			
                 dir("C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\JUNIT_TEST\\src\\reports\\") {
-			junit '/*-jupiter.xml'}
+			bat 'junit '//*-jupiter.xml''}
                
             }
         }
