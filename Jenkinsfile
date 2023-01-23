@@ -22,7 +22,7 @@ pipeline {
 				}        
   
 				dir("cd C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\JUNIT_TEST\\src\\") {
-				bat 'cd'
+				
 				}        
 
        
