@@ -3,13 +3,7 @@ pipeline {
     agent any
     stages {
 
-        stage('Checkout Codebase'){
-            steps{
-                cleanWs()
-                checkout scm: [$class: 'GitSCM', branches: [[name: '*/main']],userRemoteConfigs:
-                [[url: 'git@github.com:bhagwatamols/junitrepo.git']]]
-            }
-        }
+      
 
         stage('Build'){
             steps{
