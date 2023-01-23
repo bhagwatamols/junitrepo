@@ -14,17 +14,17 @@ pipeline {
         stage('Build'){
             steps{
                 bat 'mkdir lib'
-                bat 'cd lib/'
+                bat 'chdir lib/'
                 bat 'copy D:\\zlib\\*'
-                bat 'cd ..'
-                bat 'cd src/'
+                bat 'chdir ..'
+                bat 'chdir src/'
                 bat 'javac -cp ../lib/* CarTest.java Car.java App.java'
             }
         }
 
         stage('Test'){
             steps{
-                bat 'cd src/'
+                bat 'chdir src/'
                 bat 'java -jar ../lib/junit-platform-console-standalone-1.7.0-all.jar -cp "." --select-class CarTest --reports-dir="reports"'
                 junit 'src/reports/*-jupiter.xml'
             }
@@ -32,7 +32,7 @@ pipeline {
 
         stage('Deploy'){
             steps{
-                bat 'cd src/'
+                bat 'chdir src/'
                 bat 'java App' 
             }
         }
