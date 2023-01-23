@@ -16,7 +16,7 @@ pipeline {
                 bat 'mkdir lib'
                 bat 'chdir lib//'
                 bat 'copy D:\\zlib\\*'
-                bat 'chdir ..'
+                bat 'cd'
                 bat 'chdir src//'
                 bat 'javac -cp ../lib/* CarTest.java Car.java App.java'
             }
