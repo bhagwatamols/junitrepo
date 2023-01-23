@@ -23,6 +23,7 @@ pipeline {
   
 				dir("C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\JUNIT_TEST\\src\\") {
 				 bat 'javac -cp ../lib/* CarTest.java Car.java App.java'
+				 bat 'copy D:\\zlib\\*'
 				}        
 
        
@@ -34,8 +35,10 @@ pipeline {
             steps{
 			
 				dir("C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\JUNIT_TEST\\src\\") {
-				 bat 'java -jar ../lib/junit-platform-console-standalone-1.7.0-all.jar -cp "." --select-class CarTest --reports-dir="reports"'
-                junit 'src/reports/*-jupiter.xml'
+				
+				bat 'java -jar junit-platform-console-standalone-1.7.0.jar  -cp "."; --select-class CarTest --reports-dir="reports"'
+				
+				
 				} 
 			
                 
