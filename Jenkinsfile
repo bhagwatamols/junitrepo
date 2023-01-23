@@ -14,9 +14,10 @@ pipeline {
         stage('Build'){
             steps{
                 bat 'mkdir lib'
-                bat 'cd lib\\'
+                bat 'cd lib/'
                 bat 'copy D:\\zlib\\*'
-                bat 'cd src\\'
+                bat 'cd ..'
+                bat 'cd src/'
                 bat 'javac -cp ../lib/* CarTest.java Car.java App.java'
             }
         }
