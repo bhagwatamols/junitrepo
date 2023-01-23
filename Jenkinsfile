@@ -37,11 +37,12 @@ pipeline {
 				dir("C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\JUNIT_TEST\\src\\") {
 				
 				bat 'java -jar junit-platform-console-standalone-1.7.0.jar  -cp "."; --select-class CarTest --reports-dir="reports"'
-				junit 'src/reports/*-jupiter.xml'
+				
 				
 				} 
 			
-                
+                dir("C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\JUNIT_TEST\\src\\reports\\") {
+			junit '/*-jupiter.xml'}
                
             }
         }
