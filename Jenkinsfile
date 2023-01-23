@@ -7,7 +7,7 @@ pipeline {
             steps{
                 cleanWs()
                 checkout scm: [$class: 'GitSCM', branches: [[name: '*/main']],userRemoteConfigs:
-                [url: 'https://github.com/bhagwatamols/junitrepo.git']]]
+                [[url: 'git@github.com:bhagwatamols/junitrepo.git']]]
             }
         }
 
