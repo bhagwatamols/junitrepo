@@ -15,7 +15,7 @@ pipeline {
             steps{
                 bat 'mkdir lib'
 				dir("C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\JUNIT_TEST\\lib\\") {
-				bat 'cd'
+				
 				}
 		
 		        bat 'copy D:\\zlib\\*'
