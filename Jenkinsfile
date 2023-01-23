@@ -17,7 +17,7 @@ pipeline {
                 bat 'cd lib/'
                 bat 'curl https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.7.0/junit-platform-console-standalone-1.7.0-all.jar'
                 bat 'cd src'
-                bat 'javac -cp "../lib/*" CarTest.java Car.java App.java'
+                bat 'javac -cp ../lib/* CarTest.java Car.java App.java'
             }
         }
 
